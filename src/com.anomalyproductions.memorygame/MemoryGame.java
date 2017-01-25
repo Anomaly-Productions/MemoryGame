@@ -18,8 +18,9 @@ public class MemoryGame extends JFrame {
     private final int ROWS = 3;
     private final int COLUMNS = 3;
     private final int BUTTON_GAP = 10;
+    //Instead of hard-coding it it in, makes the program easier to understand
 
-
+    //Nimbus look and feel (w/ error checking)
     private void setLookAndFeel(){
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
@@ -38,8 +39,10 @@ public class MemoryGame extends JFrame {
         setLookAndFeel();
 
         JPanel pane = new JPanel();
-        GridLayout buttons = new GridLayout(ROWS, COLUMNS, BUTTON_GAP, BUTTON_GAP);
+        GridLayout buttons = new GridLayout(ROWS, COLUMNS, BUTTON_GAP, BUTTON_GAP);//Used the BUTTON_GAP variable twice because same margin
+      //inbetween the buttons
         pane.setLayout(buttons);
+        //Might be creating these button variables outside of this
         JButton btnOne = new JButton("---");
         JButton btnTwo = new JButton("---");
         JButton btnThree = new JButton("---");
@@ -49,6 +52,7 @@ public class MemoryGame extends JFrame {
         JButton btnSeven = new JButton("---");
         JButton btnEight = new JButton("---");
         JButton btnNine = new JButton("---");
+        //Adds the buttons to the screen
         pane.add(btnOne);
         pane.add(btnTwo);
         pane.add(btnThree);
